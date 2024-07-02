@@ -91,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
       welcomeScreen.classList.add('hidden');
       incorrectScreen.classList.add('hidden');
       quizScreen.classList.remove('hidden');
+      // document.getElementById('greeting').innerText = `Hello, ${username}! Good luck!`;
       resetQuiz();
       displayQuestion();
     });

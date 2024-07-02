@@ -13,19 +13,21 @@
 <body>
     <div id="welcome-screen">
         <div class="container d-flex flex-column">
-
             <div class="row">
                 <div class="col-12 mb-5">
                     <h1 id="heading">Welcome to Quiz Time!</h1>
                     <hr>
                 </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-4 mt-5">
-                        <label for="Name">Enter your name:</label>
-                        <input type="text" id="userName" name="username">
-                        <button id="start-button" class="btn btn-secondary mt-2">Start Quiz</button>
-                    </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-6 mt-5">
+                    <label for="Name">Enter your name:</label>
+                    <input type="text" id="userName" name="username">
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <button id="start-button" class="btn btn-secondary mt-2">Start Quiz</button>
                 </div>
             </div>
         </div>
@@ -33,7 +35,12 @@
 
     <div id="quiz-screen" class="hidden">
         <div class="container d-flex flex-column">
-            <div class="row justify-content-center">
+            <div class="row">
+                <div class="col greeting-box">
+                    <h1 id="greeting">`Hello, ${username}! Good luck!`</h1>
+                </div>
+            </div>    
+            <div class="row">
                 <div class="col-12 question">
                     <h2 id="question-text">Question Here</h2> <!-- Question will appear here -->
                 </div>
