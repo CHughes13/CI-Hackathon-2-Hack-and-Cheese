@@ -105,3 +105,10 @@ function displayQuestion() {
         answerElements[index].textContent = answer;
     })
 }
+
+startButton.addEventListener("click", () => {
+    welcomeScreen.style.display = "none"
+    incorrectScreen.style.display = "none"
+    quizScreen.style.display = "block"
+    displayQuestion()
+});
