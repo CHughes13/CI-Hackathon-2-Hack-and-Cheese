@@ -5,7 +5,7 @@ body {
     font-family: "Raleway", sans-serif;
     color: #445361;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 /* ----------Hidden */
@@ -15,13 +15,20 @@ body {
 
 /* --------- Heading */
 
-.heading {
+h1 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3.5em;
+    color: white;
 }
 
-#welcome-screen{
-    background-color: #E6ECF0;
+hr {
+    color: black;
+    line-height: 5px;
+}
+
+#welcome-screen,
+#quiz-screen {
+    background-color: #909090;
     background-image: url(/assets/images/background.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -34,4 +41,54 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
+}
+
+/* Quiz Container */
+.quiz-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* width: 80vw; */
+    max-width: 80vw;
+}
+
+/* Question Styles */
+.question h2 {
+    margin: 0 0 20px 0;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* Answers Container */
+.answers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Answer Box Styles */
+.answer {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    width: 48%; /* Adjusted to fit two boxes in a row */
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.answer:hover {
+    background-color: #0056b3;
+}
+
+.letter {
+    font-weight: bold;
+    margin-bottom: 5px;
 }

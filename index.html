@@ -11,48 +11,55 @@
 </head>
 
 <body>
-    <div id="welcome-screen" class="container d-flex flex-column">
+    <div id="welcome-screen">
+        <div class="container d-flex flex-column">
 
-        <div class="row">
-            <div class="col-12 mb-5">
-                <h1 id="heading">Welcome to Quiz Time!</h1>
-                <hr>
-            </div>
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <h1 id="heading">Welcome to Quiz Time!</h1>
+                    <hr>
+                </div>
 
-            <div class="row justify-content-center">
-                <div class="col-4 mt-5">
-                    <label for="Name">Enter your name:</label>
-                    <input type="text" id="userName" name="username">
-                    <button id="start-button" class="btn btn-secondary mt-2">Start Quiz</button>
+                <div class="row justify-content-center">
+                    <div class="col-4 mt-5">
+                        <label for="Name">Enter your name:</label>
+                        <input type="text" id="userName" name="username">
+                        <button id="start-button" class="btn btn-secondary mt-2">Start Quiz</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <div id="quiz-screen" class="hidden">
-        <div class="question">
-            <h2 id="question-text">Question Here</h2> <!-- Question will appear here -->
+        <div class="container d-flex flex-column">
+            <div class="row justify-content-center">
+                <div class="col-12 question">
+                    <h2 id="question-text">Question Here</h2> <!-- Question will appear here -->
+                </div>
+            </div>
         </div>
-        <div class="quiz-container">
-            <div class="answers">
-                <div class="answer" id="answer1">
+        <div class="quiz-container d-flex flex-column">
+            <div class="row justify-content-around align-items-center answers">
+                <div class="col-3 answer" id="answer1">
                     <div class="letter">A:</div>
                     <div class="text"></div>
                 </div>
-                <div class="answer" id="answer2">
+                <div class="col-3 answer" id="answer2">
                     <div class="letter">B:</div>
                     <div class="text"></div>
                 </div>
-                <div class="answer" id="answer3">
+                <div class="col-3 answer" id="answer3">
                     <div class="letter">C:</div>
                     <div class="text"></div>
                 </div>
-                <div class="answer" id="answer4">
+                <div class="col-3 answer" id="answer4">
                     <div class="letter">D:</div>
                     <div class="text"></div>
                 </div>
             </div>
         </div>
+
     </div>
 
     <div id="incorrect-screen" class="hidden">

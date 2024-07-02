@@ -88,9 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   
     startButton.addEventListener("click", () => {
-      welcomeScreen.style.display = "none";
-      incorrectScreen.style.display = "none";
-      quizScreen.style.display = "block";
+      welcomeScreen.classList.add('hidden');
+      incorrectScreen.classList.add('hidden');
+      quizScreen.classList.remove('hidden');
       resetQuiz();
       displayQuestion();
     });
@@ -103,4 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
       displayQuestion();
     });
   });
-  
+
+  // welcomeScreen.style.display = "none";
+  //     incorrectScreen.style.display = "none";
+  //     quizScreen.style.display = "block";
