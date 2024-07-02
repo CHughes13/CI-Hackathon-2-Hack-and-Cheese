@@ -5,8 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const quizScreen = document.getElementById("quiz-screen")
     const incorrectScreen = document.getElementById("incorrect-screen")
     const questionText = document.getElementById("question-text")
+    let currentCorrectAnswer;
 });
 
+// Array of questions
 const questions = [
     { question: "What is the capital of France?", 
       answers: ["Paris", "London", "Berlin", "Madrid"],
@@ -89,13 +91,14 @@ const questions = [
       correctAnswer: "Soybeans" }
 ];
 
-let currentCorrectAnswer;
 
+// Get a random question
 function getRandomQuestion() {
     const randomIndex = Math.floor(Math.random() * questions.length)
     return questions[randomIndex]
 }
 
+// Display the question and answers
 function displayQuestion() {
     const questionObj = getRandomQuestion()
     questionText.textContent = questionObj.question
@@ -106,14 +109,7 @@ function displayQuestion() {
     })
 }
 
-startButton.addEventListener("click", () => {
-    welcomeScreen.style.display = "none"
-    incorrectScreen.style.display = "none"
-    quizScreen.style.display = "block"
-    displayQuestion()
-});
-
-
+// Check if the selected answer is correct
 function checkAnswer(selectedAnswer) {
     if (selectedAnswer.textContent === currentCorrectAnswer) {
         alert("That's Correct!")
@@ -124,12 +120,25 @@ function checkAnswer(selectedAnswer) {
     }
 }
 
+
+// Event listener for start button
+startButton.addEventListener("click", () => {
+    welcomeScreen.style.display = "none"
+    incorrectScreen.style.display = "none"
+    quizScreen.style.display = "block"
+    displayQuestion()
+});
+
+
+// Event listeners for answer boxes
 answerElements.forEach(answerElement => {
     answerElement.parentElement.addEventListener("click", () => {
         checkAnswer(answerElement)
     });
 });
 
+
+// Event listener for retry button
 retryButton.addEventListener("click", () => {
     incorrectScreen.style.display = "none"
     welcomeScreen.style.display = "none"
