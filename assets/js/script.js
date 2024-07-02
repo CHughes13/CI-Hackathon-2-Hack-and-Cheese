@@ -112,3 +112,20 @@ startButton.addEventListener("click", () => {
     quizScreen.style.display = "block"
     displayQuestion()
 });
+
+
+function checkAnswer(selectedAnswer) {
+    if (selectedAnswer.textContent === currentCorrectAnswer) {
+        alert("That's Correct!")
+        displayQuestion() // Display a new question immediately
+    } else {
+        quizScreen.style.display = "none"
+        incorrectScreen.style.display = "flex"
+    }
+}
+
+answerElements.forEach(answerElement => {
+    answerElement.parentElement.addEventListener("click", () => {
+        checkAnswer(answerElement)
+    });
+});
