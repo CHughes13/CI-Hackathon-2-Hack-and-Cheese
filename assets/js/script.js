@@ -88,3 +88,20 @@ const questions = [
       answers: ["Soybeans", "Chicken", "Beef", "Fish"],
       correctAnswer: "Soybeans" }
 ];
+
+let currentCorrectAnswer;
+
+function getRandomQuestion() {
+    const randomIndex = Math.floor(Math.random() * questions.length)
+    return questions[randomIndex]
+}
+
+function displayQuestion() {
+    const questionObj = getRandomQuestion()
+    questionText.textContent = questionObj.question
+    currentCorrectAnswer = questionObj.correctAnswer
+
+    questionObj.answers.forEach((answer, index) => {
+        answerElements[index].textContent = answer;
+    })
+}
