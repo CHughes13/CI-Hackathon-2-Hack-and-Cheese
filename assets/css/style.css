@@ -25,6 +25,7 @@ body {
     justify-content: center;
 }
 
+
 /* Buttons */
 #start-button, #retry-button {
     display: block;
@@ -82,12 +83,12 @@ body {
     color: white;
     padding: 15px;
     border-radius: 5px;
-    width: 48%;
+    width: 48%; /* Adjusted to fit two boxes in a row */
     margin-bottom: 10px;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
     display: flex;
     flex-direction: column;
     align-items: center;
