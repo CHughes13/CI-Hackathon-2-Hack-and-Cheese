@@ -108,3 +108,10 @@ body {
     font-weight: bold;
     margin-bottom: 5px;
 }
+
+
+/* Footer styles */
+footer {
+    background-color: #FFCA00;
+    color: #0E0F13;
+}
