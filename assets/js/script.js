@@ -129,3 +129,11 @@ answerElements.forEach(answerElement => {
         checkAnswer(answerElement)
     });
 });
+
+retryButton.addEventListener("click", () => {
+    incorrectScreen.style.display = "none"
+    welcomeScreen.style.display = "none"
+    quizScreen.style.display = "block"
+    displayQuestion()
+});
+
