@@ -13,18 +13,12 @@ body {
     display: none;
 }
 
-/* Welcome and Incorrect screen */
+/* Welcome screen */
 #welcome-screen {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
-#incorrect-screen {
-    flex-direction: column;
-    justify-content: center;
-}
-
 
 /* Buttons */
 #start-button, #retry-button {
@@ -63,6 +57,10 @@ body {
     max-width: 80vw;
 }
 
+.quiz-category {
+    max-height:5%;
+}
+
 /* Question Styles */
 .question h2 {
     margin: 0 0 20px 0;
@@ -96,6 +94,14 @@ body {
 
 .answer:hover {
     background-color: #0056b3;
+}
+
+.answer.correct {
+    background-color: #28a745;
+}
+
+.answer.incorrect {
+    background-color: #dc3545;
 }
 
 .letter {
