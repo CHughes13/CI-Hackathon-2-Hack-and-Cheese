@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div id="welcome-screen">
+    <div id="welcome-screen" class="">
         <div class="container d-flex flex-column">
             <div class="row">
                 <div class="col-12 mb-5">
@@ -37,9 +37,9 @@
         <div class="container d-flex flex-column">
             <div class="row">
                 <div class="col greeting-box">
-                    <h1 id="greeting">`Hello, ${username}! Good luck!`</h1>
+                    <h2 id="greeting">`Hello, ${username}! Good luck!`</h2>
                 </div>
-            </div>    
+            </div>
             <div class="row">
                 <div class="col-12 question">
                     <h2 id="question-text">Question Here</h2> <!-- Question will appear here -->
@@ -48,19 +48,19 @@
         </div>
         <div class="quiz-container d-flex flex-column">
             <div class="row justify-content-around align-items-center answers">
-                <div class="col-3 answer" id="answer1">
+                <div class="col-12 col-md-5 answer" id="answer1">
                     <div class="letter">A:</div>
                     <div class="text"></div>
                 </div>
-                <div class="col-3 answer" id="answer2">
+                <div class="col-12 col-md-5 answer" id="answer2">
                     <div class="letter">B:</div>
                     <div class="text"></div>
                 </div>
-                <div class="col-3 answer" id="answer3">
+                <div class="col-12 col-md-5 answer" id="answer3">
                     <div class="letter">C:</div>
                     <div class="text"></div>
                 </div>
-                <div class="col-3 answer" id="answer4">
+                <div class="col-12 col-md-5 answer" id="answer4">
                     <div class="letter">D:</div>
                     <div class="text"></div>
                 </div>
@@ -70,9 +70,15 @@
     </div>
 
     <div id="incorrect-screen" class="hidden">
-        <h1>That was incorrect</h1>
-        <hr>
-        <button id="retry-button">Try Again?</button>
+        <div class="container d-flex flex-column">
+            <div class="row">
+                <div class="col">
+                    <h1>That was incorrect</h1>
+                    <hr>
+                    <button id="retry-button" class="btn btn-secondary mt-2">Try Again?</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
