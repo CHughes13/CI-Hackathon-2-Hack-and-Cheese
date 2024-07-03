@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function displayQuestion() {
         // This will check to see if all questions have been asked
         if (askedQuestions.length >= questions.length) {
-            endQuiz();
+            endQuiz(questions.length, correctCount);
             return;
         }
 
@@ -127,12 +127,32 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(displayQuestion, 1000);
     }
 
-    function endQuiz() {
+    //Works out final score as a percentage so if more questions are added it's scale up with it
+    function resultsMessage(totalQuestions, correctCount) {
+        const percentage = (correctCount / totalQuestions) * 100;
+        const fixedPercentage = percentage.toFixed(0);
+    
+        if (percentage >= 80) {
+            return `You got ${fixedPercentage}%! You Feta believe you're the best! Congratulations!`;
+        } else if (percentage >= 60) {
+            return `You got ${fixedPercentage}%! You are Brie-lliant! Well done!`;
+        } else if (percentage >= 40) {
+            return `You got ${fixedPercentage}%! You need to mature a bit more. Try again!`;
+        } else {
+            return `You got ${fixedPercentage}%! That's not a Gouda score. Try again!`;
+        }
+    }
+    function endQuiz(totalQuestions, correctCount) {
         quizScreen.classList.add('hidden');
-        // scoreBoard.classList.add('hidden');
         homeButtonContainer.classList.add('hidden');
         resultsScreen.classList.remove('hidden');
+
+        const resultsMessageBox = document.getElementById("results-message-box");
+        const message = resultsMessage(totalQuestions, correctCount);
+        resultsMessageBox.textContent = message;
     }
+
+    
 
     answerElements.forEach(answerElement => {
         answerElement.addEventListener("click", () => {
