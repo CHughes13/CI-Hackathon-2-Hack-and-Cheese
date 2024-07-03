@@ -1,4 +1,4 @@
-# Chessy Choices!
+# Cheesy Choices!
 
 ## Overview
 
@@ -9,13 +9,13 @@ Quiz Time is a web-based trivia game that tests users on a wide range of subject
 Here are the initial wireframes for the Quiz Time application, along with screen shots of the initial design. These provide a visual outline of the planned layout and functionality.
 
 #### Welcome Screen
-![Welcome Screen Wireframe](URL_to_welcome_screen_wireframe)
+![Welcome Screen Wireframe](assets/images/cheesy-choices-desktop-wireframes-welcome-screen.png)
 
 #### Question Screen
-![Question Screen Wireframe](URL_to_question_screen_wireframe) 
+![Quiz Screen Wireframe](assets/images/cheesy-choices-desktop-wireframes-quiz-screen.png) 
 
 #### Mobile View
-![Mobile View Welcome Screen Wireframe](URL_to_mobile_welcome_screen_wireframe)
+![Mobile View Wireframes](assets/images/cheesy-choices-phone-wireframes.png)
 #
 
 ## Initial Design
@@ -25,13 +25,13 @@ These are screenshots of the project around the beginning of development
 
 
 
-![Alert message screenshot](URL_to_Alert_message_screenshot)
+![Alert message screenshot](assets/images/cheesy-choices-initial-design-alert-message.png)
 -
-![Quiz screen screenshot](URL_to_Quiz_screen_screenshot)
+![Quiz screen screenshot](assets/images/cheesy-choices-initial-design-quiz-screen.png)
 -
-![Welcome screen screenshot](URL_to_Welcome_screen_screenshot)
+![Welcome screen screenshot](assets/images/cheesy-choices-initial-design-welcome-screen.png)
 -
-![incorrect screen screenshot](URL_to_incorrect_screen_screenshot)
+![incorrect screen screenshot](assets/images/cheesy-choices-initial-design-incorrect-screen.png)
 
 
 ## Features
@@ -50,7 +50,7 @@ These are screenshots of the project around the beginning of development
 - Bootstrap 5.3.3
 - Trello
 
-![Trello Project Board](URL_to_Trello_Board_Screenshot)
+![Trello Project Board](assets/images/Hack-&-Cheese-Project-Board.png)
 
 
 ## Setup and Running the Application
@@ -59,4 +59,4 @@ These are screenshots of the project around the beginning of development
 2. Open the HTML file in a web browser to start the application.
 3. Enter your name, opt for a timed challenge if desired, and click 'Start Quiz' to begin.
 4. Answer the questions by clicking on the choices.
-5. View your score, correct answers, incorrect answers, and best streak at the end of the session.
+5. View your score, correct answers, incorrect answers, and best streak at any time during the session.
