@@ -21,6 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const incorrectCountElement = document.getElementById("incorrect-count");
     const bestStreakElement = document.getElementById("best-streak");
 
+    const resultsScreen = document.getElementById("results-screen");
+
+
+
+
     let currentCorrectAnswer = '';
     let correctCount = 0;
     let incorrectCount = 0;
@@ -82,6 +87,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function displayQuestion() {
+        // This will check to see if all questions have been asked
+        if (askedQuestions.length >= questions.length) {
+            endQuiz();
+            return;
+        }
+
         const questionObj = getRandomQuestion();
         questionText.textContent = questionObj.question;
         currentCorrectAnswer = questionObj.correctAnswer;
@@ -116,6 +127,19 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(displayQuestion, 1000);
     }
 
+    function endQuiz() {
+        quizScreen.classList.add('hidden');
+        // scoreBoard.classList.add('hidden');
+        homeButtonContainer.classList.add('hidden');
+        resultsScreen.classList.remove('hidden');
+    }
+
+    answerElements.forEach(answerElement => {
+        answerElement.addEventListener("click", () => {
+            checkAnswer(answerElement);
+        });
+    });
+
     answerElements.forEach(answerElement => {
         answerElement.addEventListener("click", () => {
             checkAnswer(answerElement);
@@ -144,6 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
             quizScreen.classList.remove('hidden');
             scoreBoard.classList.remove('hidden');
             homeButtonContainer.classList.remove('hidden');
+            resultsScreen.classList.add('hidden');
 
             document.getElementById('greeting').innerText = `Hello, ${username}! Good luck!`;
             resetQuiz();
@@ -183,6 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
         quizScreen.classList.add('hidden');
         scoreBoard.classList.add('hidden');
         homeButtonContainer.classList.add('hidden');
+        resultsScreen.classList.add('hidden');
         resetQuiz();
     });
 });
