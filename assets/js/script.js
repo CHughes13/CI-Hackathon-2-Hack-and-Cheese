@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const welcomeScreen = document.getElementById("welcome-screen");
     const quizScreen = document.getElementById("quiz-screen");
     const questionText = document.getElementById("question-text");
+
+    const toggleTimer = document.getElementById("flexSwitchCheckDefault");
+    const timerDisplay = document.getElementById("timer");
     const answerElements = [
         document.getElementById("answer1"),
         document.getElementById("answer2"),
@@ -119,9 +122,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+
     startButton.addEventListener("click", () => {
         const username = document.getElementById('userName').value;
         const usernameInput = document.getElementById("userName");
+        // Transform input to uppercase
+    usernameInput.addEventListener("input", () => {
+        usernameInput.value = usernameInput.value.toUpperCase();
+    });
+        
         if (!usernameInput.value) {
             event.preventDefault(); // Prevent form submission
             alert("Username is required!");
@@ -135,11 +144,39 @@ document.addEventListener("DOMContentLoaded", () => {
             quizScreen.classList.remove('hidden');
             scoreBoard.classList.remove('hidden');
             homeButtonContainer.classList.remove('hidden');
+
             document.getElementById('greeting').innerText = `Hello, ${username}! Good luck!`;
             resetQuiz();
             displayQuestion();
+
+            // Start the timer if the toggle is checked
+            if (toggleTimer.checked) {
+                const duration = 600; // 10 minutes
+                startTimer(duration, timerDisplay);
+            }
         }
     });
+
+    // Timer function
+    function startTimer(duration, display) {
+        let timer = duration, minutes, seconds;
+        display.classList.remove('hidden');
+        timerInterval = setInterval(() => {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                clearInterval(timerInterval);
+                alert("Time is up!");
+                // Add logic to end the quiz or reset
+            }
+        }, 1000);
+    }
 
     homeButton.addEventListener("click", () => {
         welcomeScreen.classList.remove('hidden');
