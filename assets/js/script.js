@@ -88,9 +88,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     startButton.addEventListener("click", () => {
-        welcomeScreen.style.display = "none";
-        quizScreen.style.display = "block";
-        resetQuiz();
-        displayQuestion();
+      username = document.getElementById('userName').value;
+      welcomeScreen.classList.add('hidden');
+      incorrectScreen.classList.add('hidden');
+      quizScreen.classList.remove('hidden');
+      document.getElementById('greeting').innerText = `Hello, ${username}! Good luck!`;
+      resetQuiz();
+      displayQuestion();
     });
-});
+  
+    retryButton.addEventListener("click", () => {
+      incorrectScreen.style.display = "none";
+      welcomeScreen.style.display = "none";
+      quizScreen.style.display = "block";
+      resetQuiz();
+      displayQuestion();
+    });
+  });

@@ -1,0 +1,105 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0, 10px;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Welcome and Incorrect screen */
+#welcome-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#incorrect-screen {
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* Buttons */
+#start-button, #retry-button {
+    display: block;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#start-button:hover, #retry-button:hover {
+    background-color: #0354aa;
+}
+
+/* Question Styles */
+.question {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* Quiz Container */
+.quiz-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80vw;
+    max-width: 80vw;
+}
+
+/* Question Styles */
+.question h2 {
+    margin: 0 0 20px 0;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* Answers Container */
+.answers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Answer Box Styles */
+.answer {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    width: 48%; /* Adjusted to fit two boxes in a row */
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.answer:hover {
+    background-color: #0056b3;
+}
+
+.letter {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
