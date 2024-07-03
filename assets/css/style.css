@@ -30,7 +30,7 @@ hr {
 #welcome-screen,
 #quiz-screen {
     background-color: #909090;
-    background-image: url(/assets/images/background.jpg);
+    background-image: url('../images/background.jpg');
     background-size: 70rem;
     background-repeat: no-repeat;
     background-position: center;
