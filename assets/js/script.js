@@ -121,13 +121,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     startButton.addEventListener("click", () => {
         const username = document.getElementById('userName').value;
-        welcomeScreen.classList.add('hidden');
-        quizScreen.classList.remove('hidden');
-        scoreBoard.classList.remove('hidden');
-        homeButtonContainer.classList.remove('hidden');
-        document.getElementById('greeting').innerText = `Hello, ${username}! Good luck!`;
-        resetQuiz();
-        displayQuestion();
+        const usernameInput = document.getElementById("userName");
+        if (!usernameInput.value) {
+            event.preventDefault(); // Prevent form submission
+            alert("Username is required!");
+            return;
+        } else if (usernameInput.value.length > 20) {
+            event.preventDefault(); // Prevent form submission
+            alert("Username is too long, please try again!");
+            return;
+        } else {
+            welcomeScreen.classList.add('hidden');
+            quizScreen.classList.remove('hidden');
+            scoreBoard.classList.remove('hidden');
+            homeButtonContainer.classList.remove('hidden');
+            document.getElementById('greeting').innerText = `Hello, ${username}! Good luck!`;
+            resetQuiz();
+            displayQuestion();
+        }
     });
 
     homeButton.addEventListener("click", () => {
