@@ -152,13 +152,6 @@ document.addEventListener("DOMContentLoaded", () => {
         resultsMessageBox.textContent = message;
     }
 
-    
-
-    answerElements.forEach(answerElement => {
-        answerElement.addEventListener("click", () => {
-            checkAnswer(answerElement);
-        });
-    });
 
     answerElements.forEach(answerElement => {
         answerElement.addEventListener("click", () => {
