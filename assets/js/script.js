@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const quizScreen = document.getElementById("quiz-screen");
   const questionText = document.getElementById("question-text");
   let currentCorrectAnswer;
+  
 
   const answerElements = [
       document.getElementById("answer1"),
@@ -85,10 +86,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   startButton.addEventListener("click", () => {
       const username = document.getElementById('userName').value;
-      welcomeScreen.classList.add('hidden');
+      const usernameInput = document.getElementById("userName");
+                if (!usernameInput.value) {
+                    event.preventDefault(); // Prevent form submission
+                    alert("Username is required!");
+                    return welcomeScreen;
+                } else if (usernameInput.value.length > 20) {
+                    event.preventDefault(); // Prevent form submission
+                    alert("Username is to long, please try again!");
+                    return welcomeScreen;
+                } else {   
+                    welcomeScreen.classList.add('hidden');
       quizScreen.classList.remove('hidden');
       document.getElementById('greeting').innerText = `Hello, ${username}! Good luck!`;
       resetQuiz();
-      displayQuestion();
+      displayQuestion();}
   });
 });
+
+
