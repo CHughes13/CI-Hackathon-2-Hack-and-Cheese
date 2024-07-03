@@ -1,5 +1,4 @@
 /* --------- Global style */
-
 body {
     background-color: white;
     font-family: "Raleway", sans-serif;
@@ -14,7 +13,6 @@ body {
 }
 
 /* --------- Heading */
-
 h1 {
     text-align: center;
     font-size: 3.5em;
@@ -30,8 +28,7 @@ hr {
 }
 
 #welcome-screen,
-#quiz-screen,
-#incorrect-screen {
+#quiz-screen {
     background-color: #909090;
     background-image: url(/assets/images/background.jpg);
     background-size: 70rem;
@@ -74,7 +71,6 @@ hr {
     margin-bottom: 10px;
 }
 
-
 /* Answer Box Styles */
 .answer {
     background-color: #0E0F13;
@@ -91,6 +87,7 @@ hr {
 .answer:hover {
     background-color: #221D11;
 }
+
 .answer.correct {
     background-color: #28a745;
 }
