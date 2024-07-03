@@ -1,20 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const startButton = document.getElementById("start-button");
-    const retryButton = document.getElementById("retry-button");
-    const welcomeScreen = document.getElementById("welcome-screen");
-    const quizScreen = document.getElementById("quiz-screen");
-    const incorrectScreen = document.getElementById("incorrect-screen");
-    const questionText = document.getElementById("question-text");
-    let currentCorrectAnswer;
-  
-    const answerElements = [
-      document.getElementById("answer1").querySelector(".text"),
-      document.getElementById("answer2").querySelector(".text"),
-      document.getElementById("answer3").querySelector(".text"),
-      document.getElementById("answer4").querySelector(".text"),
-    ];
-  
-    const questions = [
+  const startButton = document.getElementById("start-button");
+  const welcomeScreen = document.getElementById("welcome-screen");
+  const quizScreen = document.getElementById("quiz-screen");
+  const questionText = document.getElementById("question-text");
+  let currentCorrectAnswer;
+
+  const answerElements = [
+      document.getElementById("answer1"),
+      document.getElementById("answer2"),
+      document.getElementById("answer3"),
+      document.getElementById("answer4"),
+  ];
+
+  const questions = [
       { question: "What is the capital of France?", answers: ["Paris", "London", "Berlin", "Madrid"], correctAnswer: "Paris" },
       { question: "What is 2 + 2?", answers: ["3", "4", "5", "6"], correctAnswer: "4" },
       { question: "Who wrote 'To Kill a Mockingbird'?", answers: ["Harper Lee", "Mark Twain", "Ernest Hemingway", "F. Scott Fitzgerald"], correctAnswer: "Harper Lee" },
@@ -35,73 +33,62 @@ document.addEventListener("DOMContentLoaded", () => {
       { question: "Who was the first person to walk on the moon?", answers: ["Buzz Aldrin", "Michael Collins", "Yuri Gagarin", "Neil Armstrong"], correctAnswer: "Neil Armstrong" },
       { question: "What is the largest ocean on Earth?", answers: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"], correctAnswer: "Pacific Ocean" },
       { question: "What is the main ingredient in traditional Japanese miso soup?", answers: ["Soybeans", "Chicken", "Beef", "Fish"], correctAnswer: "Soybeans" },
-    ];
-  
-    let askedQuestions = [];
-  
-    function resetQuiz() {
+  ];
+
+  let askedQuestions = [];
+
+  function resetQuiz() {
       askedQuestions = [];
-    }
-  
-    function getRandomQuestion() {
+  }
+
+  function getRandomQuestion() {
       let randomIndex;
       let question;
-  
+
       do {
-        randomIndex = Math.floor(Math.random() * questions.length);
-        question = questions[randomIndex];
+          randomIndex = Math.floor(Math.random() * questions.length);
+          question = questions[randomIndex];
       } while (askedQuestions.includes(question));
-  
+
       askedQuestions.push(question);
-  
+
       return question;
-    }
-  
-    function displayQuestion() {
+  }
+
+  function displayQuestion() {
       const questionObj = getRandomQuestion();
       questionText.textContent = questionObj.question;
       currentCorrectAnswer = questionObj.correctAnswer;
-  
+
       questionObj.answers.forEach((answer, index) => {
-        answerElements[index].textContent = answer;
+          answerElements[index].querySelector(".text").textContent = answer;
+          answerElements[index].classList.remove('correct', 'incorrect');
       });
-    }
-  
-    function checkAnswer(selectedAnswer) {
-      if (selectedAnswer.textContent === currentCorrectAnswer) {
-        alert("That's Correct!");
-        if (askedQuestions.length === questions.length) {
-          resetQuiz();
-        }
-        displayQuestion();
-      } else {
-        quizScreen.style.display = "none";
-        incorrectScreen.style.display = "flex";
-        resetQuiz();
-      }
-    }
-  
-    answerElements.forEach(answerElement => {
-      answerElement.parentElement.addEventListener("click", () => {
-        checkAnswer(answerElement);
+  }
+
+  function checkAnswer(selectedAnswer) {
+      const isCorrect = selectedAnswer.querySelector(".text").textContent === currentCorrectAnswer;
+      selectedAnswer.classList.add(isCorrect ? 'correct' : 'incorrect');
+      answerElements.forEach(answerElement => {
+          if (answerElement.querySelector(".text").textContent === currentCorrectAnswer) {
+              answerElement.classList.add('correct');
+          }
       });
-    });
-  
-    startButton.addEventListener("click", () => {
-      username = document.getElementById('userName').value;
+      setTimeout(displayQuestion, 1000);
+  }
+
+  answerElements.forEach(answerElement => {
+      answerElement.addEventListener("click", () => {
+          checkAnswer(answerElement);
+      });
+  });
+
+  startButton.addEventListener("click", () => {
+      const username = document.getElementById('userName').value;
       welcomeScreen.classList.add('hidden');
-      incorrectScreen.classList.add('hidden');
       quizScreen.classList.remove('hidden');
       document.getElementById('greeting').innerText = `Hello, ${username}! Good luck!`;
       resetQuiz();
       displayQuestion();
-    });
-  
-    retryButton.addEventListener("click", () => {
-      incorrectScreen.style.display = "none";
-      welcomeScreen.style.display = "none";
-      quizScreen.style.display = "block";
-      resetQuiz();
-      displayQuestion();
-    });
   });
+});
