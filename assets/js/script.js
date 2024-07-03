@@ -88,10 +88,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   
     startButton.addEventListener("click", () => {
+      username = document.getElementById('userName').value;
       welcomeScreen.classList.add('hidden');
       incorrectScreen.classList.add('hidden');
       quizScreen.classList.remove('hidden');
-      // document.getElementById('greeting').innerText = `Hello, ${username}! Good luck!`;
+      document.getElementById('greeting').innerText = `Hello, ${username}! Good luck!`;
       resetQuiz();
       displayQuestion();
     });
@@ -105,6 +106,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // welcomeScreen.style.display = "none";
-  //     incorrectScreen.style.display = "none";
-  //     quizScreen.style.display = "block";
