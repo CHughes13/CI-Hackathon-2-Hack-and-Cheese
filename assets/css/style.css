@@ -105,4 +105,16 @@ hr {
 footer {
     background-color: #FFCA00;
     color: #0E0F13;
+    padding: 5px 0;
+}
+
+/* Styles social media icons */
+.social-media-icons {
+    margin: 12px;
+    font-size: 2rem;
+    color: white;
+}
+/* When user hover over social icon, they get feedback so they can see it's something to interact with*/
+.social-media-icons:hover {
+        color: #221D11;
 }
