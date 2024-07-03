@@ -9,7 +9,7 @@ body {
 
 /* ----------Hidden */
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 /* --------- Heading */
@@ -100,6 +100,46 @@ hr {
     font-weight: bold;
     margin-bottom: 5px;
 }
+
+#score-board {
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffeb3b; /* Match the yellow theme */
+    border-radius: 10px;
+    margin-top: 20px;
+    display: none;
+}
+
+.score-item {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 25px;
+}
+
+#correct-count {
+    color: green;
+}
+
+#incorrect-count {
+    color: red;
+}
+
+#best-streak {
+    color: blue;
+}
+
+#home-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#home-button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+}
+
 
 /* Footer styles */
 footer {
