@@ -87,6 +87,7 @@ These are screenshots of the project around the beginning of development:
   - Copyright line includes year of publication and team name. This allows users to see how up to date the information on the web application is.
   - Features at the bottom of the page throughout (and has a matching colour theme with other elements on the site), this lets the user know they're still on the same webpage.
   - The footer is important as it encourages the user to interact and stay connected with Cheesy Choices on other social media platforms.
+
 ![Screenshot 2024-07-04 132836](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/64b519bc-a391-43fc-8dbd-5656333bf441)
 
 
