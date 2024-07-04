@@ -35,6 +35,7 @@ These are screenshots of the project around the beginning of development:
 - CSS3
 - JavaScript
 - Bootstrap 5.3.3
+- ChatGPT used throughout for coding advice and inspiration
 - [Jamboard](https://jamboard.google.com/d/1XjsnzAiuQ_O_WgiFDCjuUN0aw7v927GWzUWEdflyDuE/viewer?ts=667ec8a4&pli=1&f=1) (digital interactive whiteboard)
 - [Trello](https://trello.com/b/CIy6Ngeo/hackathon-2-hack-cheese-project-board) (Project board)
 
@@ -102,20 +103,23 @@ These are screenshots of the project around the beginning of development:
 **- Website Optimization**
   - No errors were found when passing through [Google Lighthouse](TBA)
 
-### Bugs Fixed - TBA
+### Bugs Fixed
 - __Background Image Missing from Deployed Version__ 
   - **Issue:** While the background image appeared during checks on the IDE, when the website was deployed the background was a grey box instead.
   - **Fix:** Suspected it was a filepath issue. Checked the code. There was indeed a sneaky / at the front of the path. Removed this and background image appeared on deployed version.
+ 
 ![screenshot_2024-07-03_at_14 37 34_720](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/42fe2091-ea66-4e76-bfae-6602d157469c)
 
 - __Footer Overlapping Content__ 
   - **Issue:** The Footer would overlap the content on the page. This resulted in the Home button and Scoreboard being hidden undearneath the Footer.
   - **Fix?** We did this.
+    
  ![screenshot_2024-07-03_173006_720](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/0a609fa3-5a1d-46f5-add2-7b11dba47dfc)
 
 - __Scoreboard Counter Registering All Mouse Clicks__ 
   - **Issue:** When excessively clicking on the quiz answers multiple times, the Correct/Incorrect counters would increment by the total number of clicks on that button, rather than just once. This also allowed multiple buttons to be selected if they were clicked fast enough and would then change colour.
   - **Fix?** We did this.
+  
  ![screenshot_2024-07-03_192242_720](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/e3462be3-95cd-4567-a04a-f2adb1b037b4)
 
 - __Start Quiz Button Not Working__ 
@@ -137,7 +141,23 @@ You will need to mention unfixed bugs and why they were not fixed. This section 
 5. View your score, correct answers, incorrect answers, and best streak at any time during the session.
 
 
-## Credits - TBA
+## Credits
+__Resouces Used and Consulted:__ 
+- [ChatGPT](https://openai.com/chatgpt/) used throughout for coding advice and inspiration. Also used to generate the questions for the quiz.
+- [Font Awesome](https://fontawesome.com/) for the social media icons in footer.
+- [Favicon.io](https://favicon.io/) - online favicon generator used to draw favicon.
+- Angela Yu's [The Complete 2024 Web Development Bootcamp course on Udemy](https://www.udemy.com/course/the-complete-web-development-bootcamp) - reviewed videos to brush up on if/else statements to help write results screen personal message.
+- [Stack Overflow](https://stackoverflow.com/) for troubleshooting and understanding coding concepts.
 
-In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
+__Inspiration Drawn From:__ 
+- [Britannica Games & Quizzes](https://www.britannica.com/quiz/browse)
+- WWF quizzes - [How David Attenborough are you?](https://www.wwf.org.uk/how-david-attenborough-are-you) 
+- BuzzFeed quizzes - [https://www.buzzfeed.com/hanifahrahman/disney-dog-quiz]
 
+__Special Thanks to:__ 
+- [Spencer Barriball](https://github.com/5pence/demodemo/blob/main/assets/js/script.js)
+- Code Institute's Subject Matter Expert Kevin
+- Code Institute's Coding Coach Martin
+- Code Institute's Coding Bootcamp Tutor Lewis
+- Christopher Hughes
+- Sebastian Hughes
