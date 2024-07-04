@@ -1,4 +1,7 @@
 # Cheesy Choices!
+![screenshot_2024-07-04_131949_720](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/fe018b05-c4be-4fa4-9aae-c030dfa3233b)
+![screenshot_2024-07-04_131932_720](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/0236b3cb-cd39-4576-a3fb-ba7aff5ee561)
+![screenshot_2024-07-04_131957_720](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/7040593d-6c19-41f1-917d-7a5ae6df8e6d)
 
 ## Overview
 
@@ -59,24 +62,32 @@ These are screenshots of the project around the beginning of development:
 
 - __Timer Option__
   - Offers the user the option play a timed quiz mode which will increase the quiz difficulty level. This can be toggled on/off at on the home screen.
+![screenshot_2024-07-04_at_13 21 36](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/1d3ed57a-99df-49cd-b155-38a76f05dfd3)
 
 - __Multiple Choice Answer Buttons__
   - When the user is presented with a question they are provided with four multiple choice buttons to choose from. When the user hovers their mouse cursor over the answer, the button changes to a lighter colour. When an answer is selected, it will either: turn green if it is correct, or it will turn red if it is incorrect and the button displaying the correct answer will turn green.
+![screenshot_2024-07-04_at_13 20 54_720](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/0eda82ea-44fb-4d64-998d-3a12d6fe61ec)
 
-- __Home/Try Again Button__ 
+- __Home Button__ 
   - This button will allow the user to easily navigate back to the home screen and replay the quiz.
 
 - __Score Tracker__ 
   - This scoreboard keeps track of the users correct answers, incorrect answers, and their best streak (number of questions they have answered correctly in a row). Tracks and displays scores dynamically, with visual feedback on answers.
+ 
+- __Result Screen Message__ 
+  - Personal message based on the score you get.
+![screenshot_2024-07-04_at_13 22 40_360](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/d0847c74-6fa0-4530-a5fc-58124b0985ac)
 
 - __Responsive Design__ 
   - Responsive design for compatibility with various devices and screen sizes, from mobile to desktop.
+![screenshot_2024-07-04_132148_720](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/f1bce015-c6bb-4873-9527-5ce40feca079)
 
 - __Footer__ 
   - Footer section includes links to the relevant social media sites for Cheesy Choices. To allow for easy navigation, the links open in a new tab.
   - Copyright line includes year of publication and team name. This allows users to see how up to date the information on the web application is.
   - Features at the bottom of the page throughout (and has a matching colour theme with other elements on the site), this lets the user know they're still on the same webpage.
   - The footer is important as it encourages the user to interact and stay connected with Cheesy Choices on other social media platforms.
+![Screenshot 2024-07-04 132836](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/64b519bc-a391-43fc-8dbd-5656333bf441)
 
 
 ### Features Left to Implement
@@ -163,6 +174,7 @@ __Resouces Used and Consulted:__
 - [Favicon.io](https://favicon.io/) - online favicon generator used to draw favicon.
 - Angela Yu's [The Complete 2024 Web Development Bootcamp course on Udemy](https://www.udemy.com/course/the-complete-web-development-bootcamp) - reviewed videos to brush up on if/else statements to help write results screen personal message.
 - [Stack Overflow](https://stackoverflow.com/) for troubleshooting and understanding coding concepts.
+- Background image from Freepik.com.
 
 __Inspiration Drawn From:__ 
 - [Britannica Games & Quizzes](https://www.britannica.com/quiz/browse)
