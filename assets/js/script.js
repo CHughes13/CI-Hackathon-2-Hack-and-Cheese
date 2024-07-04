@@ -126,6 +126,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    
+
     // Add event listeners to each answer element
     answerElements.forEach(answerElement => {
         answerElement.addEventListener("click", () => checkAnswer(answerElement));
@@ -157,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
         resetQuiz();
         displayQuestion();
         if (toggleTimer.checked) {
-            startTimer(600, timerDisplay); // Optional 10 minutes timer
+            startTimer(120, timerDisplay); // Optional 10 minutes timer
         }
     });
 
@@ -183,13 +185,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // End quiz logic
-    function endQuiz() {
-        quizScreen.classList.add('hidden');
-        homeButtonContainer.classList.add('hidden');
-        resultsScreen.classList.remove('hidden');
-        const resultsMessage = `Quiz Complete! You scored ${correctCount} out of ${questions.length}`;
-        document.getElementById("results-message").textContent = resultsMessage;
+function endQuiz() {
+    quizScreen.classList.add('hidden');
+    homeButtonContainer.classList.remove('hidden');
+    resultsScreen.classList.remove('hidden');
+    const resultsMessageBox = document.getElementById("results-message-box");
+    const totalQuestions = questions.length;
+    const finalMessage = resultsMessage(totalQuestions, correctCount); // Use the resultsMessage function
+    resultsMessageBox.textContent = finalMessage; // Display the final message in the results box
+}
+
+
+    function resultsMessage(totalQuestions, correctCount) {
+        const percentage = (correctCount / totalQuestions) * 100;
+        const fixedPercentage = percentage.toFixed(0); // Rounds the percentage to the nearest whole number
+    
+        if (percentage >= 80) {
+            return `Your score is ${fixedPercentage}%! You Feta believe you're the best! Well done!`;
+        } else if (percentage >= 60) {
+            return `Your score is ${fixedPercentage}%! You are Brie-lliant! Well done!`;
+        } else if (percentage >= 40) {
+            return `Your score is ${fixedPercentage}%! You need to mature a bit more. Try again!`;
+        } else {
+            return `Your score is ${fixedPercentage}%! That's not a Gouda score. Try again!`;
+        }
     }
+    
 
     // Handle home button click to reset and show welcome screen
     homeButton.addEventListener("click", () => {

@@ -7,9 +7,13 @@ body {
     margin-top: 40px;
 }
 
+p {
+    margin-bottom: 0rem;
+}
+
 /* ----------Hidden important */
 .hidden {
-    display: none 
+    display: none; 
 }
 
 /* --------- Heading */
@@ -162,6 +166,7 @@ footer {
     bottom: 0;
     
 }
+
 
 /* Styles social media icons */
 .social-media-icons {
