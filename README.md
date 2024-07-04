@@ -4,6 +4,11 @@
 
 Cheesy Choices is a web-based trivia game that tests users on a wide range of subjects from geography to science. Users can enter their name, choose whether to play with a timer, and then proceed to answer multiple choice questions. The application keeps track of users' scores, correct and incorrect responses, and their best streak of correct answers.
 
+This web application was created and built by team **Hack & Cheese**:
+- Lewis Freeman - [GitHub](https://github.com/LewF-Dev), [LinkedIn](https://www.linkedin.com/in/lewis-freeman-89230a310/)
+- Mohammed Essa - [GitHub](https://github.com/MoEssa1), [LinkedIn](https://www.linkedin.com/in/mohammed-essa-05745b256/)
+- Christina Hughes - [GitHub](https://github.com/CHughes13), [LinkedIn](https://www.linkedin.com/in/christina-hughes-50233041/)
+
 ## Wireframes
 
 Here are the initial wireframes for the Cheesy Choices application, along with screen shots of the initial design. These provide a visual outline of the planned layout and functionality.
@@ -126,7 +131,7 @@ These are screenshots of the project around the beginning of development:
 ### Unfixed Bugs
 
 - __Footer Overlapping Content__ 
-  - **Issue:** The Footer would overlap the content on the page. This resulted in the Home Button and Scoreboard being hidden undearneath the Footer, especcially on the mobile page.
+  - **Issue:** The Footer would overlap the content on the page. This resulted in the Home Button and Scoreboard being hidden underneath the Footer (particularly on mobile screen size).
   - **How would we fix it?:** Use Chrone Dev Tools to play around with padding/margin/positioning to find out why the Footer is behaving this way.
     
  ![screenshot_2024-07-03_173006_720](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/0a609fa3-5a1d-46f5-add2-7b11dba47dfc)
