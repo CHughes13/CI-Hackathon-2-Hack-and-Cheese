@@ -2,6 +2,7 @@
  * Event listener that runs when the DOM content is fully loaded.
  */
 document.addEventListener("DOMContentLoaded", () => {
+
     // Elements
     /**
      * @type {HTMLElement} The button to start the quiz.
@@ -43,10 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
      */
     const homeButton = document.getElementById("home-button");
 
-    /**
-     * @type {HTMLElement} The results screen element.
-     */
-    const resultsScreen = document.getElementById("results-screen"); // Added from your friend's code
+    // /**
+    //  * @type {HTMLElement} The results screen element.
+    //  */
+    const resultsScreen = document.getElementById("results-screen");
 
     /**
      * @type {HTMLElement} The element to display the correct count.
@@ -62,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
      * @type {HTMLElement} The element to display the best streak.
      */
     const bestStreakElement = document.getElementById("best-streak");
+
 
     // Answer elements
     /**
@@ -198,10 +200,38 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    //Works out final score as a percentage so if more questions are added it's scale up with it
+    function resultMessage(totalQuestions, correctCount) {
+    const percentage = (correctCount / totalQuestions) * 100;
+    const fixedPercentage = percentage.toFixed(0);
+
+    if (fixedPercentage >= 80) {
+        return `Your score is ${fixedPercentage}%! You Feta believe you're the best! Well done!`;
+    } else if (fixedPercentage >= 60) {
+        return `Your score is ${fixedPercentage}%! You are Brie-lliant! Well done!`;
+    } else if (fixedPercentage >= 40) {
+        return `Your score is ${fixedPercentage}%! You need to mature a bit more. Try again!`;
+    } else {
+        return `Your score is ${fixedPercentage}%! That's not a Gouda score. Try again!`;
+    }
+}
+
+    function endQuiz(totalQuestions, correctCount) {
+        quizScreen.classList.add('hidden');
+        homeButtonContainer.classList.add('hidden');
+        resultsScreen.classList.remove('hidden');
+
+        const resultsMessageBox = document.getElementById("results-message-box");
+        const message = resultsMessage(totalQuestions, correctCount);
+        resultsMessageBox.textContent = message;
+    }
+
     // Add event listeners to each answer element
     answerElements.forEach(answerElement => {
         answerElement.addEventListener("click", () => checkAnswer(answerElement));
     });
+
+
 
     // Handle start quiz button click
     startButton.addEventListener("click", () => {
@@ -248,13 +278,13 @@ document.addEventListener("DOMContentLoaded", () => {
     /**
      * Ends the quiz and displays the results.
      */
-    function endQuiz() {
-        quizScreen.classList.add('hidden');
-        homeButtonContainer.classList.add('hidden');
-        resultsScreen.classList.remove('hidden');
-        const resultsMessage = `Quiz Complete! You scored ${correctCount} out of ${questions.length}`;
-        document.getElementById("results-message").textContent = resultsMessage;
-    }
+    // function endQuiz() {
+    //     quizScreen.classList.add('hidden');
+    //     homeButtonContainer.classList.add('hidden');
+    //     resultsScreen.classList.remove('hidden');
+    //     const resultsMessage = `Quiz Complete! You scored ${correctCount} out of ${questions.length}`;
+    //     document.getElementById("results-message").textContent = resultsMessage;
+    // }
 
     // Handle home button click to reset and show welcome screen
     homeButton.addEventListener("click", () => {
