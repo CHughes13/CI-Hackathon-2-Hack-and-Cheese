@@ -28,7 +28,8 @@ hr {
 }
 
 #welcome-screen,
-#quiz-screen {
+#quiz-screen,
+#results-screen {
     background-color: #909090;
     background-image: url('../images/background.jpg');
     background-size: 70rem;
