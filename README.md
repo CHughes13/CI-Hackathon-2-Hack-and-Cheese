@@ -103,14 +103,21 @@ These are screenshots of the project around the beginning of development:
   - No errors were found when passing through [Google Lighthouse](TBA)
 
 ### Bugs Fixed - TBA
+- __Background Image Missing from Deployed Version__ 
+  - **Issue:** While the background image appeared during checks on the IDE, when the website was deployed the background was a grey box instead.
+  - **Fix:** Suspected it was a filepath issue. Checked the code. There was indeed a sneaky / at the front of the path. Removed this and background image appeared on deployed version.
+![screenshot_2024-07-03_at_14 37 34_720](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/42fe2091-ea66-4e76-bfae-6602d157469c)
+
 - __Footer Overlapping Content__ 
   - **Issue:** The Footer would overlap the content on the page. This resulted in the Home button and Scoreboard being hidden undearneath the Footer.
   - **Fix?** We did this.
- 
+ ![screenshot_2024-07-03_173006_720](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/0a609fa3-5a1d-46f5-add2-7b11dba47dfc)
+
 - __Scoreboard Counter Registering All Mouse Clicks__ 
   - **Issue:** When excessively clicking on the quiz answers multiple times, the Correct/Incorrect counters would increment by the total number of clicks on that button, rather than just once. This also allowed multiple buttons to be selected if they were clicked fast enough and would then change colour.
   - **Fix?** We did this.
- 
+ ![screenshot_2024-07-03_192242_720](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/e3462be3-95cd-4567-a04a-f2adb1b037b4)
+
 - __Start Quiz Button Not Working__ 
   - **Issue:** When the Start Quiz button was clicked instead of the quiz screen appearing, the home screen remained.
   - **Fix:** Console.log the function make sure that the "click" button was actually firing. Tested this in Chrome Dev Tools using Console. It was firing.
