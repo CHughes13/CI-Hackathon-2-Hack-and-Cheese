@@ -9,7 +9,21 @@ This web application was created and built by team **Hack & Cheese**:
 - Mohammed Essa - [GitHub](https://github.com/MoEssa1), [LinkedIn](https://www.linkedin.com/in/mohammed-essa-05745b256/)
 - Christina Hughes - [GitHub](https://github.com/CHughes13), [LinkedIn](https://www.linkedin.com/in/christina-hughes-50233041/)
 
-## Wireframes
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 5.3.3
+- [Balsamiq](https://balsamiq.com/) used to create wireframes
+- ChatGPT used throughout for coding advice and inspiration
+- [Jamboard](https://jamboard.google.com/d/1XjsnzAiuQ_O_WgiFDCjuUN0aw7v927GWzUWEdflyDuE/viewer?ts=667ec8a4&pli=1&f=1) (digital interactive whiteboard)
+- [Trello](https://trello.com/b/CIy6Ngeo/hackathon-2-hack-cheese-project-board) (Project board)
+
+![Trello Project Board](assets/images/Hack-&-Cheese-Project-Board.png)
+
+
+## Initial Planning Stage - Wireframes
 
 Here are the initial wireframes for the Cheesy Choices application, along with screen shots of the initial design. These provide a visual outline of the planned layout and functionality.
 
@@ -34,18 +48,7 @@ These are screenshots of the project around the beginning of development:
 -
 ![incorrect screen screenshot](assets/images/cheesy-choices-initial-design-incorrect-screen.png)
 
-## Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap 5.3.3
-- [Balsamiq](https://balsamiq.com/) used to create wireframes
-- ChatGPT used throughout for coding advice and inspiration
-- [Jamboard](https://jamboard.google.com/d/1XjsnzAiuQ_O_WgiFDCjuUN0aw7v927GWzUWEdflyDuE/viewer?ts=667ec8a4&pli=1&f=1) (digital interactive whiteboard)
-- [Trello](https://trello.com/b/CIy6Ngeo/hackathon-2-hack-cheese-project-board) (Project board)
-
-![Trello Project Board](assets/images/Hack-&-Cheese-Project-Board.png)
 
 
 ## Features
