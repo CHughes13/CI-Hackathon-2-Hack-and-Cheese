@@ -101,16 +101,22 @@ These are screenshots of the project around the beginning of development:
 
 ## Testing and Debugging
 
-### Validator Testing - TBA
+### Validator Testing
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator](TBA)
+  - Passed through the official W3C validator:
+  ![screenshot_2024-07-04_at_13 13 55_720](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/e2202700-ee23-481d-92ea-9375cf842ddd)
+
 - CSS
-  - No errors were found when passing through the [(Jigsaw) validator](TBA)
+  - Passed through the Jigsaw validator successfully:
+  ![screenshot_2024-07-04_131444_720](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/99bbee67-aa6d-464d-8a0c-890201499550)
+
 - JavaScript
-  - No errors were found when passing through [JSHint](TBA)
+  - Passed through online JavaScript Validator:
+![screenshot_2024-07-04_131623_720](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/a0d41777-c972-47da-9f2d-7e9d35609cc9)
+
 - Website Optimization
-  - No errors were found when passing through [Google Lighthouse](TBA)
+  - Still need to pass through [Google Lighthouse](TBA)
 
 ### Bugs Fixed
 - __Background Image Missing from Deployed Version__ 
