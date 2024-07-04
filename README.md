@@ -89,18 +89,31 @@ These are screenshots of the project around the beginning of development:
   - A table which would display the user's name and score. This would encourage the user to keep playing to gain a new personal best. The user could also challenge their friends and compete against them for the best high score.
 
 
-## Manual Testing - TBA
+## Testing - TBA
 
 ### Validator Testing - TBA
 
-- HTML
+**- HTML**
   - No errors were returned when passing through the official [W3C validator](TBA)
-- CSS
+**- CSS**
   - No errors were found when passing through the [(Jigsaw) validator](TBA)
-- JavaScript
+**- JavaScript**
   - No errors were found when passing through [JSHint](TBA)
-- Website Optimization
+**- Website Optimization**
   - No errors were found when passing through [Google Lighthouse](TBA)
+
+### Bugs Fixed - TBA
+- __Footer Overlapping Content__ 
+  - **Issue:** The Footer would overlap the content on the page. This resulted in the Home button and Scoreboard being hidden undearneath the Footer.
+  - **Fix?** We did this.
+ 
+- __Scoreboard Counter Registering All Mouse Clicks__ 
+  - **Issue:** When excessively clicking on the quiz answers multiple times, the Correct/Incorrect counters would increment by the total number of clicks on that button, rather than just once. This also allowed multiple buttons to be selected if they were clicked fast enough and would then change colour.
+  - **Fix?** We did this.
+ 
+- __Start Quiz Button Not Working__ 
+  - **Issue:** When the Start Quiz button was clicked instead of the quiz screen appearing, the home screen remained.
+  - **Fix:** Console.log the function make sure that the "click" button was actually firing. Tested this in Chrome Dev Tools using Console. It was firing.
 
 
 ### Unfixed Bugs - TBA
