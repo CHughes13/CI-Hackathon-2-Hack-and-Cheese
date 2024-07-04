@@ -110,11 +110,7 @@ These are screenshots of the project around the beginning of development:
  
 ![screenshot_2024-07-03_at_14 37 34_720](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/42fe2091-ea66-4e76-bfae-6602d157469c)
 
-- __Footer Overlapping Content__ 
-  - **Issue:** The Footer would overlap the content on the page. This resulted in the Home button and Scoreboard being hidden undearneath the Footer.
-  - **Fix?** We did this.
-    
- ![screenshot_2024-07-03_173006_720](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/0a609fa3-5a1d-46f5-add2-7b11dba47dfc)
+
 
 - __Scoreboard Counter Registering All Mouse Clicks__ 
   - **Issue:** When excessively clicking on the quiz answers multiple times, the Correct/Incorrect counters would increment by the total number of clicks on that button, rather than just once. This also allowed multiple buttons to be selected if they were clicked fast enough and would then change colour.
@@ -127,9 +123,13 @@ These are screenshots of the project around the beginning of development:
   - **Fix:** Console.log the function make sure that the "click" button was actually firing. Tested this in Chrome Dev Tools using Console. It was firing.
 
 
-### Unfixed Bugs - TBA
+### Unfixed Bugs
 
-You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed. 
+- __Footer Overlapping Content__ 
+  - **Issue:** The Footer would overlap the content on the page. This resulted in the Home Button and Scoreboard being hidden undearneath the Footer, especcially on the mobile page.
+  - **How would we fix it?:** Use Chrone Dev Tools to play around with padding/margin/positioning to find out why the Footer is behaving this way.
+    
+ ![screenshot_2024-07-03_173006_720](https://github.com/CHughes13/CI-Hackathon-2-Hack-and-Cheese/assets/82895994/0a609fa3-5a1d-46f5-add2-7b11dba47dfc)
 
 
 ## Setup and Running the Application
@@ -154,7 +154,7 @@ __Inspiration Drawn From:__
 - WWF quizzes - [How David Attenborough are you?](https://www.wwf.org.uk/how-david-attenborough-are-you) 
 - BuzzFeed quizzes - [https://www.buzzfeed.com/hanifahrahman/disney-dog-quiz]
 
-__Special Thanks to:__ 
+__Special Thanks To:__ 
 - [Spencer Barriball](https://github.com/5pence/demodemo/blob/main/assets/js/script.js)
 - Code Institute's Subject Matter Expert Kevin
 - Code Institute's Coding Coach Martin
