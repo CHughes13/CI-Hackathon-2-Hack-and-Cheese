@@ -40,6 +40,7 @@ These are screenshots of the project around the beginning of development:
 - CSS3
 - JavaScript
 - Bootstrap 5.3.3
+- [Balsamiq](https://balsamiq.com/) used to create wireframes
 - ChatGPT used throughout for coding advice and inspiration
 - [Jamboard](https://jamboard.google.com/d/1XjsnzAiuQ_O_WgiFDCjuUN0aw7v927GWzUWEdflyDuE/viewer?ts=667ec8a4&pli=1&f=1) (digital interactive whiteboard)
 - [Trello](https://trello.com/b/CIy6Ngeo/hackathon-2-hack-cheese-project-board) (Project board)
@@ -95,17 +96,17 @@ These are screenshots of the project around the beginning of development:
   - A table which would display the user's name and score. This would encourage the user to keep playing to gain a new personal best. The user could also challenge their friends and compete against them for the best high score.
 
 
-## Testing - TBA
+## Testing and Debugging
 
 ### Validator Testing - TBA
 
-**- HTML**
+- HTML
   - No errors were returned when passing through the official [W3C validator](TBA)
-**- CSS**
+- CSS
   - No errors were found when passing through the [(Jigsaw) validator](TBA)
-**- JavaScript**
+- JavaScript
   - No errors were found when passing through [JSHint](TBA)
-**- Website Optimization**
+- Website Optimization
   - No errors were found when passing through [Google Lighthouse](TBA)
 
 ### Bugs Fixed
